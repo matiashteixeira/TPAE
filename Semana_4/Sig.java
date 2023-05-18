@@ -20,7 +20,7 @@ public class Sig {
     }
 
     private void exibirMenu(){
-        System.out.println("### MENU ###");
+        System.out.printf("%n### MENU ###%n");
         System.out.println("1. Cadastrar disciplina");
         System.out.println("2. Cadastrar dados de aluno em disciplina");
         System.out.println("3. Mostrar diario de disciplina");
@@ -32,7 +32,6 @@ public class Sig {
         System.out.println("Digite o código da disciplina: ");
         Scanner entrada = new Scanner(System.in);
         d1 = new Disciplina(entrada.nextLine());
-        entrada.close();
     }
 
     private void cadastrarAluno(){
@@ -46,7 +45,6 @@ public class Sig {
 
         Aluno aluno = new Aluno(nome, nota, faltas);
         d1.adicionarAluno(aluno);
-        entrada.close();
     }
 
     private void exibirDiario(){
@@ -73,9 +71,5 @@ public class Sig {
                 exibirDiario();
                 break;
         }
-
-
-    }
-
-    
+    }   
 }

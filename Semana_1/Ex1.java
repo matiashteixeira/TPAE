@@ -46,7 +46,6 @@ public class Ex1{
         }
         
 
-
         entrada.close();
     }
 

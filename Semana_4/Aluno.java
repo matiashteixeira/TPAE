@@ -22,9 +22,6 @@ public class Aluno {
     }
 
     public String getSituacao(){
-        if(nota < 60 || faltas >= 19)
-            return "Reprovado";
-
-        return "Aprovado";
+        return (nota < 60 || faltas >= 19) ? "Reprovado" : "Aprovado";
     }
 }

@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class Sig {
     private Disciplina d1;
 
-    public Sig(){}
+    public Sig(){
+        d1 = null;
+    }
 
     public void executar(){
         int opcao;

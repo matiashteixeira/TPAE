@@ -36,11 +36,6 @@ public class Disciplina {
             }    
         };
         return comparador;
-    }
-
-
-
-    
-        
+    } 
     
 }

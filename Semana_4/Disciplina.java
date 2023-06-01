@@ -37,5 +37,16 @@ public class Disciplina {
         };
         return comparador;
     } 
-    
+
+    private Comparator<Aluno> geComparator(){
+        Comparator<Aluno> comparador = new Comparator<Aluno>() {
+            @Override
+            public int compare(Aluno o1, Aluno o2) {
+                return 0;
+            }
+        };
+
+        return comparador;
+    }
 }
+

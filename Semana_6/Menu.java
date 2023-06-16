@@ -65,11 +65,18 @@ public class Menu {
     }
 
     private void cadastraFisica(){
-        agenda.adiciona(setNome(), setEndereco(), setEmail(), setCpf(), setEstadoCivil());
+        mensagemCadastra(agenda.adiciona(setNome(), setEndereco(), setEmail(), setCpf(), setEstadoCivil()));
     }
 
     private void cadastraJuridica(){
-        agenda.adiciona(setNome(), setEndereco(), setEmail(), setCnpj(), setInscricaoEstadual());
+        mensagemCadastra(agenda.adiciona(setNome(), setEndereco(), setEmail(), setCnpj(), setInscricaoEstadual()));
+    }
+
+    private void mensagemCadastra(boolean info){
+        if(info)
+            System.out.println("Contato adicionado com sucesso!");
+        else
+            System.out.println("Contato já existe na agenda");
     }
 
     private String setNome(){
@@ -102,9 +109,9 @@ public class Menu {
         return entrada.nextLine();
     }
 
-    private String setInscricaoEstadual(){
+    private int setInscricaoEstadual(){
         System.out.print("Digite a Inscrição Estadual do contato: ");
-        return entrada.nextLine();
+        return Integer.parseInt(entrada.nextLine());
     }
 
 }

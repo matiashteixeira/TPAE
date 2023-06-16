@@ -14,7 +14,7 @@ public class PesssoaJuridica extends Contato{
 
     @Override
     public String toString(){
-        return " Nome:" + nome + " Endereço:" + endereco + " Email:" + email + " CNPJ:" + cnpj + " Inscrição Estadual:" + inscricaoEstadual; 
+        return "\nNome:" + nome + " Endereço:" + endereco + " Email:" + email + " CNPJ:" + cnpj + " Inscrição Estadual:" + inscricaoEstadual; 
     }
     
 }

@@ -8,12 +8,20 @@ public class Agenda {
         listaContatos = new ArrayList<>();
     }
 
-    public void adiciona(String nome, String endereco, String email, String cpf, String estadoCivil){
-        listaContatos.add(new PessoaFisica(nome, endereco, email, cpf, estadoCivil));
+    public boolean adiciona(String nome, String endereco, String email, String cpf, String estadoCivil){
+        if(buscarContato(cpf) == null){
+            listaContatos.add(new PessoaFisica(nome, endereco, email, cpf, estadoCivil));
+            return true;
+        }
+        return false;
     }
 
-    public void adiciona(String nome, String endereco, String email, String cnpj, int inscricaoEstadual){
-        listaContatos.add(new PesssoaJuridica(nome, endereco, email, cnpj, inscricaoEstadual));
+    public boolean adiciona(String nome, String endereco, String email, String cnpj, int inscricaoEstadual){
+        if(buscarContato(cnpj) == null){
+            listaContatos.add(new PesssoaJuridica(nome, endereco, email, cnpj, inscricaoEstadual));
+            return true;
+        }
+        return false;
     }
 
     private Contato buscarContato(String info){
@@ -48,8 +56,8 @@ public class Agenda {
                 PessoaFisica pessoa = (PessoaFisica) contato;
                 System.out.println(pessoa);
             }else{
-                PesssoaJuridica pesssoa = (PesssoaJuridica) contato;
-                System.out.println(pesssoa);
+                PesssoaJuridica pessoa = (PesssoaJuridica) contato;
+                System.out.println(pessoa);
             }
         }
     }

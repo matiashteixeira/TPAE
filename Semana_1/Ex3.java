@@ -9,9 +9,6 @@ public class Ex3 {
         qtd = entrada.nextInt();
         entrada.nextLine();
         frase = entrada.nextLine();
-
-        String[] frases = frase.split(" ");
-
         
         entrada.close();
     }

@@ -17,7 +17,7 @@ public class Simulador {
     }
 
     private void criaFilaClientes(){
-        Random e = new Random(17);
+        Random e = new Random();
         int tempoChegada = e.nextInt(4);
         int duracaoAtendimento = e.nextInt(7)+1;
 
@@ -26,9 +26,6 @@ public class Simulador {
             duracaoAtendimento = e.nextInt(7)+1;
             tempoChegada += e.nextInt(4);
         }
-        // for (Cliente cliente : filaClientes) {
-        //     System.out.println(cliente.getTempoChegada() + " " + cliente.getDuracaoAtendimento());
-        // }
     }
 
     private void criaListaAtendentes(){
